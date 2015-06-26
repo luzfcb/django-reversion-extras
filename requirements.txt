@@ -1,0 +1,4 @@
+django>=1.8.2
+wheel==0.24.0
+pytest
+# Additional requirements go here
