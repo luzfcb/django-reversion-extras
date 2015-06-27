@@ -97,7 +97,7 @@ setup(
 
     ],
     keywords=(
-        'django-reversion-extras, reversion, reversion-extras'
+        'django-reversion-extras, reversion, reversion-extras, '
         'django-reversion'
     ),
     cmdclass={'test': PyTest},
