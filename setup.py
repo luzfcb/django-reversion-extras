@@ -33,6 +33,7 @@ requirements = [
 
 test_requirements = [
     'pytest',
+    'pytest-django',
     'tox'
 ]
 
@@ -96,7 +97,8 @@ setup(
 
     ],
     keywords=(
-        'django-reversion, reversion, reversion-extras'
+        'django-reversion-extras, reversion, reversion-extras'
+        'django-reversion'
     ),
     cmdclass={'test': PyTest},
     test_suite='tests',

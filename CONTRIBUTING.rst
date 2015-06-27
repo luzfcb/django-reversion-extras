@@ -3,7 +3,7 @@ Contributing
 ============
 
 Contributions are welcome, and they are greatly appreciated! Every
-little bit helps, and credit will always be given. 
+little bit helps, and credit will always be given.
 
 You can contribute in many ways:
 
@@ -36,7 +36,7 @@ is open to whoever wants to implement it.
 Write Documentation
 ~~~~~~~~~~~~~~~~~~~
 
-django-reversion-extras could always use more documentation, whether as part of the 
+django-reversion-extras could always use more documentation, whether as part of the
 official django-reversion-extras docs, in docstrings, or even on the web in blog posts,
 articles, and such.
 
@@ -78,10 +78,11 @@ Now you can make your changes locally.
 tests, including testing other Python versions with tox::
 
     $ flake8 reversion_extras tests
+    $ isort --recursive reversion_extras tests
     $ python setup.py test
     $ tox
 
-To get flake8 and tox, just pip install them into your virtualenv. 
+To get flake8 and tox, just pip install them into your virtualenv.
 
 6. Commit your changes and push your branch to GitHub::
 
@@ -100,7 +101,7 @@ Before you submit a pull request, check that it meets these guidelines:
 2. If the pull request adds functionality, the docs should be updated. Put
    your new functionality into a function with a docstring, and add the
    feature to the list in README.rst.
-3. The pull request should work for Python 2.6, 2.7, and 3.3, and for PyPy. Check 
+3. The pull request should work for Python 2.6, 2.7, and 3.3, and for PyPy. Check
    https://travis-ci.org/luzfcb/django-reversion-extras/pull_requests
    and make sure that the tests pass for all supported Python versions.
 

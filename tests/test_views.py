@@ -5,14 +5,14 @@
 test_django-reversion-extras
 ------------
 
-Tests for `django-reversion-extras` models module.
+Tests for `django-reversion-extras` views module.
 """
 
 import os
 import shutil
 import unittest
 
-from reversion_extras import models
+from reversion_extras import views
 
 
 class TestReversion_extras(unittest.TestCase):

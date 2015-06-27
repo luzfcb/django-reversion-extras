@@ -32,6 +32,9 @@ django-reversion-extras
 
 Extra tools to work with django-reversion
 
+.. DANGER::
+   It is not ready for use, it does not have tests and only serves to try to validate the use of django-reversion for things which it was not designed
+
 Documentation
 -------------
 
@@ -46,9 +49,32 @@ Install django-reversion-extras::
 
 Then use it in a project::
 
-    import django-reversion-extras
+    from reversion_extras.views import DetailVersionListView, UpdateVersionListView
+
+
+
+``DetailVersionListView`` provides the same functionality as django.views.generic.DetailView
+
+``UpdateVersionListView`` provides the same functionality as django.views.generic.UpdateView
+
+All inject in the template context some new variables:
+
+``object_versions_list``: contains the list of django-reversion Versions of current model instance. The same
+value  returned from ``reversion.get_for_object(model_instance)``
+
+``model_name_versions_list``: is a alias to object_versions_list
+
+``version_paginator``
+``version_page_obj``
+``version_is_paginated``
+
+
 
 Features
 --------
 
-* TODO
+* TODO:
+
+Create ReversionView
+Create CompareVersionView
+

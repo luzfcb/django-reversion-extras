@@ -12,3 +12,4 @@ pylint
 
 # Additional test requirements go here
 sphinx
+sphinx_rtd_theme
