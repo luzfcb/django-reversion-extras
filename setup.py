@@ -83,8 +83,8 @@ setup(
     license='BSD',
     zip_safe=False,
     classifiers=[
-        'Development Status :: 1 - Alpha',
-        'Environment :: Django',
+        'Development Status :: 1 - Planning',
+        'Framework :: Django',
         'Intended Audience :: Developers',
         'Natural Language :: English',
         'License :: OSI Approved :: BSD License',
