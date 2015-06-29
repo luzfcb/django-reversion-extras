@@ -8,7 +8,7 @@ from django.db.models.query import QuerySet
 from django.http import Http404
 from django.utils import six
 from django.utils.translation import ugettext as _
-from django.views.generic import DetailView, UpdateView
+from django.views import generic
 from reversion.models import Version
 
 __all__ = (
@@ -181,7 +181,7 @@ class MultipleVersionObjectMixin(object):
         return super(MultipleVersionObjectMixin, self).get(self, request, *args, **kwargs)
 
 
-class DetailVersionListView(MultipleVersionObjectMixin, DetailView):
+class DetailVersionListView(MultipleVersionObjectMixin, generic.DetailView):
     """
     Render some list of django-reversion Versions of object, set by `self.model` or
     `self.queryset`. `self.queryset` can actually be any iterable of items, not just a queryset.
@@ -189,9 +189,13 @@ class DetailVersionListView(MultipleVersionObjectMixin, DetailView):
     template_name_suffix = '_version_list'
 
 
-class UpdateVersionListView(MultipleVersionObjectMixin, UpdateView):
+class UpdateVersionListView(MultipleVersionObjectMixin, generic.UpdateView):
     """
     Render some list of versions of object, set by `self.model` or `self.queryset`.
     `self.queryset` can actually be any iterable of items, not just a queryset.
     """
     template_name_suffix = '_form_version_list'
+
+
+class ReversionView(generic.FormView):
+    pass

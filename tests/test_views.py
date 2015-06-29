@@ -12,6 +12,12 @@ import os
 import shutil
 import unittest
 
+THIS = os.path.dirname(__file__)
+PARENT_OF_THIS = os.path.dirname(os.path.dirname(__file__))
+print(PARENT_OF_THIS)
+print(THIS)
+
+
 from reversion_extras import views
 
 
@@ -25,3 +31,7 @@ class TestReversion_extras(unittest.TestCase):
 
     def tearDown(self):
         pass
+
+    def test_fail(self):
+        assert 0 == 1
+

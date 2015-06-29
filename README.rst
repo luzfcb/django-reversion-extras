@@ -47,6 +47,16 @@ Install django-reversion-extras::
 
     pip install django-reversion-extras
 
+
+Put ``reversion_extras`` in your INSTALLED_APPS after ``reversion``::
+
+    INSTALLED_APPS = (
+        ...
+        'reversion',
+        'reversion_extras',
+        ...
+    )
+
 Then use it in a project::
 
     from reversion_extras.views import DetailVersionListView, UpdateVersionListView
